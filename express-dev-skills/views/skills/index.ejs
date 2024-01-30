@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+        <title><%= title %></title>
+        
+    </head>
+    <body>
+        <h1> TO GET DONE</h1>
+        <ul>
+        <% skills.forEach( skill => { %>
+          
+              <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+        <% }); %>
+        </ul>
+    </body>
+  <html>
