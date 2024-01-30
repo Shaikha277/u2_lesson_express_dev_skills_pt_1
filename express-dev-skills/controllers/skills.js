@@ -8,8 +8,8 @@ const index = (req, res) => {
   })
 }
 const show = (req, res) => {
-  const skill = Skill.getOne(req.params.id)
-  res.render("skills/show", { skill })
+  const skills = Skill.getOne(req.params.id)
+  res.render("skills/show", { skills })
 }
 module.exports = {
   index,
