@@ -1,18 +1,23 @@
 var express = require("express")
 var router = express.Router()
 const skillsCtrl = require("../controllers/skills")
-// routes/todos.js
+// routes/skills.js
 
 var express = require("express")
 var router = express.Router()
 
-// Require the controller that exports To-Do CRUD functions
-// var todosCtrl = require("../controllers/todos")
-
-// All actual paths begin with "/todos"
-
-// GET /todos
+// GET /skills
 router.get("/", skillsCtrl.index)
-// GET /todos/:id
+//new
+router.get("/new", skillsCtrl.newSkill)
+// GET /skills/:id
 router.get("/:id", skillsCtrl.show)
+//post
+router.post("/", skillsCtrl.create)
+//get
+router.get("/:id/edit", skillsCtrl.edit)
+//put
+router.put("/:id", skillsCtrl.updateSkill)
+//delete
+router.delete("/:id", skillsCtrl.deleteSkill)
 module.exports = router
